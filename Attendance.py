@@ -2,8 +2,8 @@ import cv2
 import face_recognition
 import numpy as np
 import pandas as pd
-import os
 from datetime import datetime
+import os
 
 # ====== Load Known Faces ======
 known_faces = []
@@ -13,9 +13,9 @@ path = os.path.join(os.getcwd(), "known_faces")
 if not os.path.exists(path):
     os.makedirs(path)
     print(f"[INFO] 'known_faces' folder created at: {path}")
-    print("[INFO] Please add face images (e.g., akshat.jpg) into this folder.")
+    print("[INFO] Please add face images (e.g., shashank.jpg) into this folder.")
 
-for filename in os.listdir(path):
+for filename in os.listdir(path): 
     image_path = os.path.join(path, filename)
     try:
         image = face_recognition.load_image_file(image_path)
